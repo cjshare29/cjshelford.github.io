@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C. J. Shelford | Favourite Books</title>
+
+<meta name="description" content="Discover some of C. J. Shelford's favourite books, from romantasy and fantasy to romance and unforgettable stories.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+:root{
+    --navy:#080d18;
+    --navy2:#111a2b;
+    --gold:#c9ad72;
+    --cream:#f2ead9;
+    --muted:#b9b1a2;
+    --line:rgba(201,173,114,.35)
+}
+
+*{
+    box-sizing:border-box
+}
+
+html{
+    scroll-behavior:smooth
+}
+
+body{
+    margin:0;
+    background:var(--navy);
+    color:var(--cream);
+    font-family:'Libre Baskerville',Georgia,serif;
+    line-height:1.7
+}
+
+a{
+    color:inherit;
+    text-decoration:none
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:10;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 6%;
+    background:rgba(8,13,24,.88);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line)
+}
+
+.brand{
+    font-family:Cinzel,serif;
+    letter-spacing:.12em;
+    color:var(--gold);
+    font-size:.9rem
+}
+
+.navlinks{
+    display:flex;
+    gap:28px;
+    font-size:.78rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--muted)
+}
+
+.navlinks a:hover{
+    color:var(--gold)
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero{
+    min-height:65vh;
+    display:grid;
+    place-items:center;
+    text-align:center;
+    padding:140px 7% 90px;
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #243552 0,
+            #101a2b 38%,
+            #080d18 75%
+        )
+}
+
+.hero-inner{
+    max-width:900px
+}
+
+.eyebrow{
+    color:var(--gold);
+    font-size:.78rem;
+    letter-spacing:.28em;
+    text-transform:uppercase
+}
+
+.hero h1{
+    font-family:Cinzel,serif;
+    font-size:clamp(3rem,8vw,6rem);
+    line-height:1.05;
+    margin:22px 0;
+    color:var(--cream);
+    letter-spacing:.04em
+}
+
+.hero h2{
+    font-weight:400;
+    font-size:clamp(1.1rem,2.5vw,1.5rem);
+    color:var(--muted);
+    max-width:700px;
+    margin:0 auto
+}
+
+.divider{
+    width:90px;
+    height:1px;
+    background:var(--gold);
+    margin:35px auto
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+   ========================= */
+
+section{
+    padding:100px 7%;
+    max-width:1200px;
+    margin:auto
+}
+
+.kicker{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:.2em;
+    font-size:.72rem
+}
+
+.title{
+    font-family:Cinzel,serif;
+    color:var(--gold);
+    font-size:clamp(2rem,4vw,3.3rem);
+    line-height:1.2;
+    margin:12px 0 25px
+}
+
+
+/* =========================
+   INTRODUCTION
+   ========================= */
+
+.introduction{
+    max-width:800px;
+    text-align:center;
+    margin:auto
+}
+
+.introduction p{
+    margin-bottom:22px
+}
+
+.bookshop-note{
+    margin-top:35px;
+    padding:20px 25px;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    color:var(--muted);
+    font-size:.9rem
+}
+
+
+/* =========================
+   BOOK LIST
+   ========================= */
+
+.books{
+    max-width:1100px;
+}
+
+.books-heading{
+    text-align:center;
+    margin-bottom:70px
+}
+
+.book{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:65px;
+    align-items:center;
+    padding:65px 0;
+    border-top:1px solid var(--line)
+}
+
+.book:last-child{
+    border-bottom:1px solid var(--line)
+}
+
+
+/* =========================
+   BOOK COVER
+   ========================= */
+
+.book-cover{
+    width:260px;
+    aspect-ratio:2 / 3;
+    border:1px solid var(--line);
+    background:
+        linear-gradient(
+            145deg,
+            #111a2b,
+            #0b1220
+        );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,.35)
+}
+
+.book-cover img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block
+}
+
+.cover-placeholder{
+    text-align:center;
+    padding:25px;
+    color:var(--muted);
+    font-family:Cinzel,serif;
+    font-size:.75rem;
+    letter-spacing:.15em;
+    text-transform:uppercase
+}
+
+
+/* =========================
+   BOOK INFORMATION
+   ========================= */
+
+.book-number{
+    color:var(--gold);
+    font-family:Cinzel,serif;
+    font-size:.75rem;
+    letter-spacing:.2em;
+    margin-bottom:12px
+}
+
+.book h3{
+    font-family:Cinzel,serif;
+    color:var(--cream);
+    font-size:clamp(1.7rem,3vw,2.4rem);
+    line-height:1.25;
+    margin:0 0 8px
+}
+
+.book-author{
+    color:var(--gold);
+    font-style:italic;
+    margin-bottom:25px
+}
+
+.book-description{
+    color:var(--cream);
+    max-width:650px;
+    margin-bottom:30px
+}
+
+
+/* =========================
+   BOOKSHOP BUTTON
+   ========================= */
+
+.button{
+    display:inline-block;
+    border:1px solid var(--gold);
+    padding:13px 25px;
+    color:var(--gold);
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    font-size:.75rem;
+    transition:all .2s ease
+}
+
+.button:hover{
+    background:var(--gold);
+    color:var(--navy)
+}
+
+
+/* =========================
+   BOOKSHOP PROFILE SECTION
+   ========================= */
+
+.bookshop-section{
+    text-align:center;
+    max-width:850px
+}
+
+.bookshop-section p{
+    max-width:700px;
+    margin:0 auto 30px
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer{
+    text-align:center;
+    padding:50px 7%;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    font-size:.8rem
+}
+
+.social{
+    margin-top:15px;
+    color:var(--gold)
+}
+
+.social a{
+    color:inherit;
+    text-decoration:none
+}
+
+.social a:hover{
+    opacity:.75
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media(max-width:800px){
+
+    .navlinks{
+        display:none
+    }
+
+    section{
+        padding:75px 7%
+    }
+
+    .hero{
+        min-height:60vh;
+        padding-top:130px
+    }
+
+    .book{
+        grid-template-columns:1fr;
+        gap:35px;
+        text-align:center;
+        padding:55px 0
+    }
+
+    .book-cover{
+        width:min(260px,80%);
+        margin:auto
+    }
+
+    .book-description{
+        margin-left:auto;
+        margin-right:auto
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:2.7rem
+    }
+
+    .book-cover{
+        width:75%
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+     ========================= -->
+
+<nav class="nav">
+
+    <a class="brand" href="index.html">
+        C. J. SHELFORD
+    </a>
+
+    <div class="navlinks">
+
+        <a href="index.html#book">
+            The Book
+        </a>
+
+        <a href="index.html#author">
+            About
+        </a>
+
+        <a href="index.html#world">
+            The Four Realms
+        </a>
+
+        <a href="favourite-books.html">
+            Favourite Books
+        </a>
+
+        <a href="index.html#newsletter">
+            Newsletter
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+     ========================= -->
+
+<header class="hero">
+
+    <div class="hero-inner">
+
+        <div class="eyebrow">
+            C. J. Shelford · Books I Love
+        </div>
+
+        <h1>
+            FAVOURITE BOOKS
+        </h1>
+
+        <h2>
+            Stories that have captured my imagination,
+            stolen my time and reminded me why I love books.
+        </h2>
+
+        <div class="divider"></div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     INTRODUCTION
+     ========================= -->
+
+<section class="introduction">
+
+    <div class="kicker">
+        A little about my reading
+    </div>
+
+    <div class="title">
+        Books I Love
+    </div>
+
+    <p>
+        I'm C. J. Shelford, an author of spicy M/M romantasy,
+        and a lifelong lover of stories that combine magic,
+        romance, adventure and characters who refuse to behave themselves.
+    </p>
+
+    <p>
+        I'm drawn to books with immersive worlds, complicated relationships,
+        found family, forbidden love and plenty of emotional stakes.
+        These are some of the books that have stayed with me,
+        inspired me or simply given me the pleasure of getting completely
+        lost in another world.
+    </p>
+
+    <div class="bookshop-note">
+
+        <strong>
+            Looking for something new to read?
+        </strong>
+
+        <br>
+
+        I've linked the books below to Bookshop.org where possible,
+        so you can discover them for yourself.
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FAVOURITE BOOKS
+     ========================= -->
+
+<section class="books">
+
+    <div class="books-heading">
+
+        <div class="kicker">
+            The bookshelf
+        </div>
+
+        <div class="title">
+            Some of My Favourites
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         BOOK 1
+         ========================= -->
+
+    <article class="book">
+
+        <div class="book-cover">
+
+            <!--
+            ==================================================
+            BOOK COVER 1
+
+            Replace BOOK_COVER_1.jpg with your image filename.
+
+            Example:
+            <img src="book-cover.jpg"
+                 alt="Book Title by Author Name">
+            ==================================================
+            -->
+
+            <div class="cover-placeholder">
+                BOOK COVER 1
+            </div>
+
+        </div>
+
+        <div>
+
+            <div class="book-number">
+                01
+            </div>
+
+            <h3>
+                BOOK TITLE
+            </h3>
+
+            <div class="book-author">
+                by AUTHOR NAME
+            </div>
+
+            <p class="book-description">
+                Add a short paragraph here explaining why this book
+                is one of your favourites and what you love about it.
+            </p>
+
+            <!--
+            ==================================================
+            BOOKSHOP LINK 1
+
+            Replace BOOKSHOP_LINK_1 with the actual
+            Bookshop.org link for this book.
+            ==================================================
+            -->
+
+            <a class="button"
+               href="BOOKSHOP_LINK_1"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                View on Bookshop.org
+
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- =========================
+         BOOK 2
+         ========================= -->
+
+    <article class="book">
+
+        <div class="book-cover">
+
+            <div class="cover-placeholder">
+                BOOK COVER 2
+            </div>
+
+        </div>
+
+        <div>
+
+            <div class="book-number">
+                02
+            </div>
+
+            <h3>
+                BOOK TITLE
+            </h3>
+
+            <div class="book-author">
+                by AUTHOR NAME
+            </div>
+
+            <p class="book-description">
+                Add a short paragraph here explaining why this book
+                is one of your favourites and what you love about it.
+            </p>
+
+            <a class="button"
+               href="BOOKSHOP_LINK_2"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                View on Bookshop.org
+
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- =========================
+         BOOK 3
+         ========================= -->
+
+    <article class="book">
+
+        <div class="book-cover">
+
+            <div class="cover-placeholder">
+                BOOK COVER 3
+            </div>
+
+        </div>
+
+        <div>
+
+            <div class="book-number">
+                03
+            </div>
+
+            <h3>
+                BOOK TITLE
+            </h3>
+
+            <div class="book-author">
+                by AUTHOR NAME
+            </div>
+
+            <p class="book-description">
+                Add a short paragraph here explaining why this book
+                is one of your favourites and what you love about it.
+            </p>
+
+            <a class="button"
+               href="BOOKSHOP_LINK_3"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                View on Bookshop.org
+
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- =========================
+         BOOK 4
+         ========================= -->
+
+    <article class="book">
+
+        <div class="book-cover">
+
+            <div class="cover-placeholder">
+                BOOK COVER 4
+            </div>
+
+        </div>
+
+        <div>
+
+            <div class="book-number">
+                04
+            </div>
+
+            <h3>
+                BOOK TITLE
+            </h3>
+
+            <div class="book-author">
+                by AUTHOR NAME
+            </div>
+
+            <p class="book-description">
+                Add a short paragraph here explaining why this book
+                is one of your favourites and what you love about it.
+            </p>
+
+            <a class="button"
+               href="BOOKSHOP_LINK_4"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                View on Bookshop.org
+
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- =========================
+         BOOK 5
+         ========================= -->
+
+    <article class="book">
+
+        <div class="book-cover">
+
+            <div class="cover-placeholder">
+                BOOK COVER 5
+            </div>
+
+        </div>
+
+        <div>
+
+            <div class="book-number">
+                05
+            </div>
+
+            <h3>
+                BOOK TITLE
+            </h3>
+
+            <div class="book-author">
+                by AUTHOR NAME
+            </div>
+
+            <p class="book-description">
+                Add a short paragraph here explaining why this book
+                is one of your favourites and what you love about it.
+            </p>
+
+            <a class="button"
+               href="BOOKSHOP_LINK_5"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                View on Bookshop.org
+
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- =========================
+         BOOK 6
+         ========================= -->
+
+    <article class="book">
+
+        <div class="book-cover">
+
+            <div class="cover-placeholder">
+                BOOK COVER 6
+            </div>
+
+        </div>
+
+        <div>
+
+            <div class="book-number">
+                06
+            </div>
+
+            <h3>
+                BOOK TITLE
+            </h3>
+
+            <div class="book-author">
+                by AUTHOR NAME
+            </div>
+
+            <p class="book-description">
+                Add a short paragraph here explaining why this book
+                is one of your favourites and what you love about it.
+            </p>
+
+            <a class="button"
+               href="BOOKSHOP_LINK_6"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                View on Bookshop.org
+
+            </a>
+
+        </div>
+
+    </article>
+
+</section>
+
+
+<!-- =========================
+     BOOKSHOP PROFILE
+     ========================= -->
+
+<section class="bookshop-section">
+
+    <div class="kicker">
+        Find more books
+    </div>
+
+    <div class="title">
+        My Bookshop.org List
+    </div>
+
+    <p>
+        You can find more of my favourite reads on my Bookshop.org list.
+        I'll be adding new favourites as I discover them.
+    </p>
+
+    <!--
+    ==========================================================
+    BOOKSHOP PROFILE LINK
+
+    Replace BOOKSHOP_PROFILE_LINK with your Bookshop.org
+    profile/list URL when you have it.
+    ==========================================================
+    -->
+
+    <a class="button"
+       href="BOOKSHOP_PROFILE_LINK"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        Visit My Bookshop.org List
+
+    </a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+     ========================= -->
+
+<footer>
+
+    <div>
+        © 2026 C. J. Shelford · Where Whispers Gather
+    </div>
+
+    <div class="social" aria-label="C. J. Shelford social media and contact links">
+
+        <a href="https://www.tiktok.com/@c.j.shelford"
+           target="_blank"
+           rel="noopener noreferrer">
+            TikTok
+        </a>
+
+        ·
+
+        <a href="https://www.instagram.com/cjshelfordbooks"
+           target="_blank"
+           rel="noopener noreferrer">
+            Instagram
+        </a>
+
+        ·
+
+        <a href="https://www.facebook.com/share/19MteDxyEf/?mibextid=wwXIfr"
+           target="_blank"
+           rel="noopener noreferrer">
+            Facebook
+        </a>
+
+        ·
+
+        <a href="mailto:hello@cjshelford.com">
+            Email
+        </a>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
