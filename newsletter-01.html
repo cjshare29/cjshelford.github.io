@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Where Whispers Gather No1 | C. J. Shelford</title>
+<meta name="description" content="The first C. J. Shelford newsletter, sharing the journey behind Where Whispers Gather, book-cover design, publishing on a budget, beta readers and a surprise character return.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+:root{
+    --navy:#080d18;
+    --navy2:#111a2b;
+    --gold:#c9ad72;
+    --cream:#f2ead9;
+    --muted:#b9b1a2;
+    --line:rgba(201,173,114,.35)
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    margin:0;
+    background:var(--navy);
+    color:var(--cream);
+    font-family:'Libre Baskerville',Georgia,serif;
+    line-height:1.8
+}
+a{color:inherit;text-decoration:none}
+
+.nav{
+    position:fixed;
+    top:0;left:0;right:0;z-index:10;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 6%;
+    background:rgba(8,13,24,.88);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line)
+}
+.brand{
+    font-family:Cinzel,serif;
+    letter-spacing:.12em;
+    color:var(--gold);
+    font-size:.9rem
+}
+.navlinks{
+    display:flex;
+    gap:28px;
+    font-size:.78rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--muted)
+}
+.navlinks a:hover{color:var(--gold)}
+
+.hero{
+    min-height:58vh;
+    display:grid;
+    place-items:center;
+    text-align:center;
+    padding:140px 7% 85px;
+    background:radial-gradient(circle at 50% 30%,#243552 0,#101a2b 38%,#080d18 75%)
+}
+.hero-inner{max-width:900px}
+.eyebrow{
+    color:var(--gold);
+    font-size:.78rem;
+    letter-spacing:.28em;
+    text-transform:uppercase
+}
+.hero h1{
+    font-family:Cinzel,serif;
+    font-size:clamp(2.7rem,7vw,5.6rem);
+    line-height:1.05;
+    margin:22px 0;
+    color:var(--cream);
+    letter-spacing:.04em
+}
+.hero h2{
+    font-weight:400;
+    font-size:clamp(1rem,2.2vw,1.3rem);
+    color:var(--muted);
+    max-width:720px;
+    margin:0 auto
+}
+.divider{width:90px;height:1px;background:var(--gold);margin:35px auto}
+.archive-note{color:var(--muted);font-size:.85rem}
+
+.newsletter{
+    max-width:850px;
+    margin:auto;
+    padding:90px 7%
+}
+.newsletter-intro{text-align:center;margin-bottom:55px}
+.kicker{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:.2em;
+    font-size:.72rem
+}
+.title{
+    font-family:Cinzel,serif;
+    color:var(--gold);
+    font-size:clamp(2rem,4vw,3.3rem);
+    line-height:1.2;
+    margin:12px 0 25px
+}
+.newsletter h2{
+    font-family:Cinzel,serif;
+    color:var(--gold);
+    font-size:1.65rem;
+    line-height:1.3;
+    margin:55px 0 18px
+}
+.newsletter p{margin:0 0 24px}
+
+.newsletter-image{
+    margin:38px auto 50px;
+    text-align:center
+}
+.newsletter-image img{
+    width:100%;
+    max-width:620px;
+    height:auto;
+    display:block;
+    margin:auto;
+    border:1px solid var(--line);
+    box-shadow:0 20px 60px rgba(0,0,0,.45)
+}
+.image-caption{
+    margin-top:12px;
+    color:var(--muted);
+    font-size:.78rem;
+    font-style:italic
+}
+
+.closing{
+    margin-top:55px;
+    padding-top:35px;
+    border-top:1px solid var(--line)
+}
+
+.return{
+    text-align:center;
+    max-width:850px;
+    margin:auto;
+    padding:80px 7%
+}
+.button{
+    display:inline-block;
+    border:1px solid var(--gold);
+    padding:13px 25px;
+    color:var(--gold);
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    font-size:.75rem;
+    transition:all .2s ease
+}
+.button:hover{background:var(--gold);color:var(--navy)}
+
+.publisher{
+    text-align:center;
+    padding:60px 7%;
+    border-top:1px solid var(--line);
+    max-width:900px;
+    margin:auto
+}
+.publisher img{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+    display:block;
+    margin:18px auto 15px
+}
+.publisher p{color:var(--muted);margin:0}
+
+footer{
+    text-align:center;
+    padding:50px 7%;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    font-size:.8rem
+}
+.social{margin-top:15px;color:var(--gold)}
+.social a{color:inherit;text-decoration:none}
+.social a:hover{opacity:.75}
+
+@media(max-width:800px){
+    .nav{
+        padding:12px 5%;
+        flex-direction:column;
+        gap:10px
+    }
+    .navlinks{
+        display:flex;
+        gap:14px;
+        flex-wrap:wrap;
+        justify-content:center;
+        font-size:.62rem
+    }
+    .hero{
+        min-height:auto;
+        padding:135px 7% 65px
+    }
+    .newsletter{padding:70px 7%}
+    .newsletter h2{font-size:1.45rem}
+}
+
+@media(max-width:500px){
+    .hero h1{font-size:2.55rem}
+    .navlinks{gap:10px}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+    <a class="brand" href="index.html">C. J. SHELFORD</a>
+    <div class="navlinks">
+        <a href="index.html#book">The Book</a>
+        <a href="index.html#author">About</a>
+        <a href="index.html#world">The Four Realms</a>
+        <a href="favourite-books.html">Favourite Books</a>
+        <a href="sneak-peek.html">Reader's Room</a>
+        <a href="index.html#newsletter">Newsletter</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="hero-inner">
+        <div class="eyebrow">The Reader's Room · Newsletter Archive</div>
+        <h1>WHERE WHISPERS GATHER NO1</h1>
+        <h2>Welcome to my very first newsletter!</h2>
+        <div class="divider"></div>
+        <div class="archive-note">Originally published September 2026</div>
+    </div>
+</header>
+
+<main class="newsletter">
+
+    <div class="newsletter-intro">
+        <div class="kicker">From the author</div>
+        <div class="title">Where Whispers Gather</div>
+        <p>Well… here we are. My very first newsletter. If you've signed up, thank you. Seriously. It means a lot to me that you've decided to follow along with my journey of getting my very first novel out into the world. So, what have I been up to?</p>
+    </div>
+
+    <h2>🎨 I've been designing a book cover</h2>
+
+    <p>Over the last few weeks, I've probably spent far too much time designing book covers. I decided quite early on that I wanted to create the cover for <em>Where Whispers Gather</em> myself. I've deliberately stayed away from using AI for the actual cover, and instead I've been trying to learn as much as I can about cover design, typography, composition and what actually makes a cover work. Let's just say… there has been a lot of experimenting.</p>
+
+    <p>I've created quite a few different versions already, and I'm getting closer to something I'm really happy with. I might even share a couple of sneaky peeks of some of the designs I've been playing around with below. Don't get too excited though… They aren't the final cover. 😉</p>
+
+    <div class="newsletter-image">
+        <img src="https://embed.filekitcdn.com/e/nWZhbqPuZAoSkFSqaHCimq/sUNufX4X7pJV6E6BZzxMXQ/email" alt="Where Whispers Gather book cover design">
+        <div class="image-caption">One of the cover designs shared in the original newsletter.</div>
+    </div>
+
+    <p>All that cover designing has, admittedly, taken a little time away from writing. But I'm back on track now, and the writing is moving again.</p>
+
+    <h2>💷 Trying to publish my first book without spending a fortune</h2>
+
+    <p>Another thing I've been thinking about a lot is the cost of actually publishing a book. This is my first novel, and I'm trying to see if I can get it published while spending as little as realistically possible. There are obviously costs involved, and I'm slowly figuring out what I actually need to spend money on and what I can learn to do myself. I might break down the costs and everything I've learned about publishing my first book in a future newsletter.</p>
+
+    <p>It could be interesting to see just how much it actually costs to get a book from a Pages document to something you can hold in your hands.</p>
+
+    <h2>📖 To my potential beta readers…</h2>
+
+    <p>If you signed up to potentially become a beta reader, thank you! I'm currently aiming for mid-to-late October to get the manuscript out to beta readers, so please keep an eye out for the sign-up forms. I also want to be completely upfront about something. Unfortunately, I won't be able to offer payment for beta reading. Please forgive me for that, but as I've mentioned, I'm trying to get my first book published while keeping the costs as low as possible.</p>
+
+    <p>At this stage, I'm relying on the goodwill and enthusiasm of you lovely readers rather than having the budget to pay people. In return, beta readers will receive a signed copy of the book once it launches as a thank you. And if you'd like one, I'm also more than happy to give you a little shout-out on my social media when the book is released. I'm incredibly grateful to anyone who is willing to give up their time to read my book and tell me what works, what doesn't, and where I can make it better.</p>
+
+    <h2>✍️ And finally… the writing</h2>
+
+    <p>This week's writing has been particularly exciting. Something happened that I honestly wasn't expecting. A character has managed to bring themselves back into the story. And the strangest thing? It happened completely naturally. I didn't force it. I wasn't sitting there thinking, <em>How can I get this character back into the story?</em> It just… happened. Even I was taken aback when I realised what I'd done. I'm not saying anything more about that, though. Spoilers. 😜 You'll just have to wait and see.</p>
+
+    <div class="closing">
+        <p>And that's it for my very first newsletter! Thank you for being here, for following along, and for taking an interest in <em>Where Whispers Gather</em>. I'm really excited to share more of the journey with you — the good bits, the frustrating bits, the things I get completely obsessed with (apparently book covers are one of them), and hopefully, eventually, a finished book.</p>
+
+        <p>Until next time,<br>C. J. Shelford<br><em>Author of Where Whispers Gather</em></p>
+    </div>
+
+</main>
+
+<section class="return">
+    <div class="kicker">The Reader's Room</div>
+    <div class="title">Back to the Archive</div>
+    <p>Return to the Reader's Room to discover more newsletters, sneak peeks and behind-the-scenes glimpses from the world of <em>Where Whispers Gather</em>.</p>
+    <a class="button" href="sneak-peek.html">Return to Reader's Room</a>
+</section>
+
+<section class="publisher">
+    <div class="kicker">Published by</div>
+    <img src="IMG_3136.PNG" alt="Crystal Quartz Press">
+    <p>Crystal Quartz Press</p>
+</section>
+
+<footer>
+    © C. J. Shelford · Where Whispers Gather
+    <div class="social">
+        <a href="https://www.tiktok.com/@c.j.shelford" target="_blank" rel="noopener noreferrer">TikTok</a>
+        · <a href="https://www.instagram.com/cjshelfordbooks" target="_blank" rel="noopener noreferrer">Instagram</a>
+        · <a href="https://www.facebook.com/share/19MteDxyEf/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+        · <a href="mailto:hello@cjshelford.com">Email</a>
+    </div>
+</footer>
+
+</body>
+</html>
