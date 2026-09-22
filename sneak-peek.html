@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Reader's Room | C. J. Shelford</title>
+
+<meta name="description" content="Exclusive sneak peeks, previous newsletters and secrets from the Four Realms by C. J. Shelford.">
+
+<meta name="robots" content="noindex, nofollow">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+:root{
+    --navy:#080d18;
+    --navy2:#111a2b;
+    --gold:#c9ad72;
+    --cream:#f2ead9;
+    --muted:#b9b1a2;
+    --line:rgba(201,173,114,.35)
+}
+
+*{
+    box-sizing:border-box
+}
+
+html{
+    scroll-behavior:smooth
+}
+
+body{
+    margin:0;
+    background:var(--navy);
+    color:var(--cream);
+    font-family:'Libre Baskerville',Georgia,serif;
+    line-height:1.8
+}
+
+a{
+    color:inherit;
+    text-decoration:none
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:10;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 6%;
+    background:rgba(8,13,24,.88);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line)
+}
+
+.brand{
+    font-family:Cinzel,serif;
+    letter-spacing:.12em;
+    color:var(--gold);
+    font-size:.9rem
+}
+
+.navlinks{
+    display:flex;
+    gap:28px;
+    font-size:.78rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--muted)
+}
+
+.navlinks a:hover{
+    color:var(--gold)
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero{
+    min-height:65vh;
+    display:grid;
+    place-items:center;
+    text-align:center;
+    padding:150px 7% 90px;
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #243552 0,
+            #101a2b 38%,
+            #080d18 75%
+        )
+}
+
+.hero-inner{
+    max-width:900px
+}
+
+.eyebrow{
+    color:var(--gold);
+    font-size:.78rem;
+    letter-spacing:.28em;
+    text-transform:uppercase
+}
+
+.hero h1{
+    font-family:Cinzel,serif;
+    font-size:clamp(3rem,8vw,6rem);
+    line-height:1.05;
+    margin:22px 0;
+    color:var(--cream);
+    letter-spacing:.04em
+}
+
+.hero h2{
+    font-weight:400;
+    font-size:clamp(1.05rem,2.5vw,1.4rem);
+    color:var(--muted);
+    max-width:720px;
+    margin:0 auto
+}
+
+.divider{
+    width:90px;
+    height:1px;
+    background:var(--gold);
+    margin:35px auto
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+   ========================= */
+
+section{
+    padding:100px 7%;
+    max-width:1100px;
+    margin:auto
+}
+
+.kicker{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:.2em;
+    font-size:.72rem
+}
+
+.title{
+    font-family:Cinzel,serif;
+    color:var(--gold);
+    font-size:clamp(2rem,4vw,3.3rem);
+    line-height:1.2;
+    margin:12px 0 25px
+}
+
+
+/* =========================
+   WELCOME
+   ========================= */
+
+.introduction{
+    max-width:800px;
+    text-align:center;
+    margin:auto
+}
+
+.introduction p{
+    margin-bottom:22px
+}
+
+.secret-note{
+    margin:40px auto 0;
+    padding:25px 30px;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    color:var(--muted);
+    font-size:.9rem
+}
+
+.secret-note strong{
+    color:var(--gold);
+    font-family:Cinzel,serif;
+    letter-spacing:.05em
+}
+
+
+/* =========================
+   SNEAK PEEK
+   ========================= */
+
+.sneak-peek{
+    max-width:900px;
+    margin:auto
+}
+
+.peek-header{
+    text-align:center;
+    margin-bottom:55px
+}
+
+.peek-box{
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17,26,43,.95),
+            rgba(11,18,32,.95)
+        );
+    border:1px solid var(--line);
+    padding:55px 65px;
+    box-shadow:0 20px 60px rgba(0,0,0,.35)
+}
+
+.chapter-number{
+    color:var(--gold);
+    font-family:Cinzel,serif;
+    font-size:.75rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    text-align:center;
+    margin-bottom:15px
+}
+
+.chapter-title{
+    font-family:Cinzel,serif;
+    font-size:clamp(1.8rem,4vw,2.8rem);
+    text-align:center;
+    color:var(--cream);
+    margin:0 0 45px
+}
+
+.chapter-text{
+    max-width:720px;
+    margin:auto
+}
+
+.chapter-text p{
+    margin:0 0 25px
+}
+
+.chapter-text p:first-child:first-letter{
+    font-family:Cinzel,serif;
+    color:var(--gold);
+    font-size:3.5rem;
+    float:left;
+    line-height:.8;
+    padding-right:8px;
+    padding-top:6px
+}
+
+.peek-end{
+    text-align:center;
+    color:var(--gold);
+    font-family:Cinzel,serif;
+    letter-spacing:.15em;
+    margin-top:45px
+}
+
+
+/* =========================
+   NEWSLETTERS
+   ========================= */
+
+.newsletters{
+    max-width:900px;
+    margin:auto
+}
+
+.newsletter-heading{
+    text-align:center;
+    margin-bottom:55px
+}
+
+.newsletter-card{
+    border-top:1px solid var(--line);
+    padding:35px 0
+}
+
+.newsletter-card:last-child{
+    border-bottom:1px solid var(--line)
+}
+
+.newsletter-date{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:.15em;
+    font-size:.7rem;
+    margin-bottom:10px
+}
+
+.newsletter-card h3{
+    font-family:Cinzel,serif;
+    color:var(--cream);
+    font-size:1.6rem;
+    margin:0 0 12px
+}
+
+.newsletter-card p{
+    color:var(--muted);
+    max-width:750px
+}
+
+.newsletter-link{
+    display:inline-block;
+    margin-top:10px;
+    color:var(--gold);
+    font-size:.78rem;
+    letter-spacing:.12em;
+    text-transform:uppercase
+}
+
+.newsletter-link:hover{
+    opacity:.75
+}
+
+
+/* =========================
+   BACK TO WEBSITE
+   ========================= */
+
+.return-section{
+    text-align:center;
+    max-width:700px
+}
+
+.button{
+    display:inline-block;
+    border:1px solid var(--gold);
+    padding:13px 25px;
+    color:var(--gold);
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    font-size:.75rem;
+    transition:all .2s ease
+}
+
+.button:hover{
+    background:var(--gold);
+    color:var(--navy)
+}
+
+
+/* =========================
+   PUBLISHING
+   ========================= */
+
+.publisher{
+    text-align:center;
+    max-width:500px;
+    padding-top:60px;
+    padding-bottom:60px
+}
+
+.publisher img{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+    margin:0 auto 15px;
+    display:block
+}
+
+.publisher p{
+    color:var(--muted);
+    font-family:Cinzel,serif;
+    letter-spacing:.08em
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer{
+    text-align:center;
+    padding:50px 7%;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    font-size:.8rem
+}
+
+.social{
+    margin-top:15px;
+    color:var(--gold)
+}
+
+.social a{
+    color:inherit;
+    text-decoration:none
+}
+
+.social a:hover{
+    opacity:.75
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media(max-width:800px){
+
+    .nav{
+        padding:12px 5%;
+        flex-direction:column;
+        gap:10px
+    }
+
+    .navlinks{
+        display:flex;
+        gap:16px;
+        flex-wrap:wrap;
+        justify-content:center;
+        font-size:.65rem
+    }
+
+    .hero{
+        min-height:auto;
+        padding:130px 7% 65px
+    }
+
+    section{
+        padding:75px 7%
+    }
+
+    .peek-box{
+        padding:35px 25px
+    }
+
+    .chapter-text{
+        font-size:.95rem
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:2.7rem
+    }
+
+    .peek-box{
+        padding:30px 20px
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+     ========================= -->
+
+<nav class="nav">
+
+    <a class="brand" href="index.html">
+        C. J. SHELFORD
+    </a>
+
+    <div class="navlinks">
+
+        <a href="index.html#book">
+            The Book
+        </a>
+
+        <a href="index.html#author">
+            About
+        </a>
+
+        <a href="index.html#world">
+            The Four Realms
+        </a>
+
+        <a href="favourite-books.html">
+            Favourite Books
+        </a>
+
+        <a href="index.html#newsletter">
+            Newsletter
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+     ========================= -->
+
+<header class="hero">
+
+    <div class="hero-inner">
+
+        <div class="eyebrow">
+            C. J. Shelford · For Readers
+        </div>
+
+        <h1>
+            THE READER'S ROOM
+        </h1>
+
+        <h2>
+            A few secrets, stories and glimpses beyond the pages
+            of <em>Where Whispers Gather</em>.
+        </h2>
+
+        <div class="divider"></div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     WELCOME
+     ========================= -->
+
+<section class="introduction">
+
+    <div class="kicker">
+        A little something extra
+    </div>
+
+    <div class="title">
+        Welcome to the Reader's Room
+    </div>
+
+    <p>
+        If you've found your way here through my newsletter,
+        welcome. This is where I'll keep some of the things
+        I don't share everywhere else.
+    </p>
+
+    <p>
+        You'll find previous newsletters, behind-the-scenes
+        glimpses and occasional sneak peeks from the Four Realms.
+        And, from time to time, I'll leave the door open just
+        far enough for you to read something from the story itself.
+    </p>
+
+    <div class="secret-note">
+
+        <strong>
+            For those who follow the whispers...
+        </strong>
+
+        <br><br>
+
+        Thank you for being here and for following the journey
+        of <em>Where Whispers Gather</em>.
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SNEAK PEEK
+     ========================= -->
+
+<section class="sneak-peek">
+
+    <div class="peek-header">
+
+        <div class="kicker">
+            Exclusive sneak peek
+        </div>
+
+        <div class="title">
+            From Where Whispers Gather
+        </div>
+
+    </div>
+
+
+    <div class="peek-box">
+
+        <div class="chapter-number">
+            Chapter Eight
+        </div>
+
+        <h2 class="chapter-title">
+            The Wayfinder's Path
+        </h2>
+
+
+        <div class="chapter-text">
+
+            <p>
+                PASTE YOUR CHAPTER EXTRACT HERE.
+            </p>
+
+            <p>
+                Continue your chapter extract here.
+            </p>
+
+            <p>
+                Continue the extract here...
+            </p>
+
+        </div>
+
+
+        <div class="peek-end">
+            ✦ &nbsp; ✦ &nbsp; ✦
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PREVIOUS NEWSLETTERS
+     ========================= -->
+
+<section class="newsletters">
+
+    <div class="newsletter-heading">
+
+        <div class="kicker">
+            From the archives
+        </div>
+
+        <div class="title">
+            Previous Newsletters
+        </div>
+
+        <p>
+            Missed one? Here's where you can catch up on
+            previous letters from C. J. Shelford.
+        </p>
+
+    </div>
+
+
+    <!-- NEWSLETTER 1 -->
+
+    <article class="newsletter-card">
+
+        <div class="newsletter-date">
+            September 2026
+        </div>
+
+        <h3>
+            Welcome to the Four Realms
+        </h3>
+
+        <p>
+            ADD A SHORT DESCRIPTION OF THIS NEWSLETTER HERE.
+        </p>
+
+        <a class="newsletter-link" href="newsletter-01.html">
+            Read the newsletter →
+        </a>
+
+    </article>
+
+
+    <!-- NEWSLETTER 2 -->
+
+    <article class="newsletter-card">
+
+        <div class="newsletter-date">
+            August 2026
+        </div>
+
+        <h3>
+            Behind the Story
+        </h3>
+
+        <p>
+            ADD A SHORT DESCRIPTION OF THIS NEWSLETTER HERE.
+        </p>
+
+        <a class="newsletter-link" href="newsletter-02.html">
+            Read the newsletter →
+        </a>
+
+    </article>
+
+
+    <!--
+    ADD FUTURE NEWSLETTERS HERE
+
+    Copy a newsletter-card and change:
+    - date
+    - title
+    - description
+    - link
+    -->
+
+
+</section>
+
+
+<!-- =========================
+     RETURN TO WEBSITE
+     ========================= -->
+
+<section class="return-section">
+
+    <div class="kicker">
+        Continue exploring
+    </div>
+
+    <div class="title">
+        Return to the Four Realms
+    </div>
+
+    <p>
+        Discover more about <em>Where Whispers Gather</em>,
+        the characters and the world they're about to enter.
+    </p>
+
+    <a class="button" href="index.html">
+        Return to C. J. Shelford
+    </a>
+
+</section>
+
+
+<!-- =========================
+     PUBLISHING
+     ========================= -->
+
+<section class="publisher">
+
+    <div class="kicker">
+        Publishing
+    </div>
+
+    <img
+        src="IMG_3136.PNG"
+        alt="Crystal Quartz Press"
+    >
+
+    <p>
+        Crystal Quartz Press
+    </p>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+     ========================= -->
+
+<footer>
+
+    © 2026 C. J. Shelford · Where Whispers Gather
+
+    <div class="social">
+
+        <a
+            href="https://www.tiktok.com/@c.j.shelford"
+            target="_blank"
+            rel="noopener noreferrer">
+            TikTok
+        </a>
+
+        &nbsp;·&nbsp;
+
+        <a
+            href="https://www.instagram.com/cjshelfordbooks"
+            target="_blank"
+            rel="noopener noreferrer">
+            Instagram
+        </a>
+
+        &nbsp;·&nbsp;
+
+        <a
+            href="https://www.facebook.com/share/19MteDxyEf/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer">
+            Facebook
+        </a>
+
+        &nbsp;·&nbsp;
+
+        <a href="mailto:hello@cjshelford.com">
+            Email
+        </a>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
