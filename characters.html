@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>C. J. Shelford | Meet the Characters</title>
+
+    <meta name="description" content="Meet the characters of Where Whispers Gather by C. J. Shelford. Discover Zethan and Valerious, their worlds, and the story that brings them together.">
+
+    <link rel="icon" type="image/png" href="IMG_3136.PNG">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root{
+            --navy:#080d18;
+            --navy2:#111a2b;
+            --gold:#c9ad72;
+            --cream:#f2ead9;
+            --muted:#b9b1a2;
+            --line:rgba(201,173,114,.35);
+        }
+
+        *{
+            box-sizing:border-box;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            margin:0;
+            background:var(--navy);
+            color:var(--cream);
+            font-family:'Libre Baskerville',Georgia,serif;
+            line-height:1.7;
+        }
+
+        a{
+            color:inherit;
+            text-decoration:none;
+        }
+
+        /* NAVIGATION */
+
+        .nav{
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            z-index:10;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:18px 6%;
+            background:rgba(8,13,24,.88);
+            backdrop-filter:blur(12px);
+            border-bottom:1px solid var(--line);
+        }
+
+        .brand{
+            font-family:Cinzel,serif;
+            letter-spacing:.12em;
+            color:var(--gold);
+            font-size:.9rem;
+        }
+
+        .navlinks{
+            display:flex;
+            gap:24px;
+            font-size:.72rem;
+            letter-spacing:.1em;
+            text-transform:uppercase;
+            color:var(--muted);
+        }
+
+        .navlinks a:hover{
+            color:var(--gold);
+        }
+
+        /* HERO */
+
+        .hero{
+            min-height:70vh;
+            display:grid;
+            place-items:center;
+            text-align:center;
+            padding:150px 7% 90px;
+            background:
+                radial-gradient(
+                    circle at 50% 30%,
+                    #243552 0,
+                    #101a2b 38%,
+                    #080d18 75%
+                );
+        }
+
+        .hero-inner{
+            max-width:900px;
+        }
+
+        .eyebrow{
+            color:var(--gold);
+            font-size:.78rem;
+            letter-spacing:.28em;
+            text-transform:uppercase;
+        }
+
+        .hero h1{
+            font-family:Cinzel,serif;
+            font-size:clamp(3rem,8vw,6rem);
+            line-height:1.05;
+            margin:22px 0;
+            color:var(--cream);
+            letter-spacing:.04em;
+        }
+
+        .hero h2{
+            font-weight:400;
+            font-size:clamp(1rem,2.5vw,1.35rem);
+            color:var(--muted);
+            max-width:700px;
+            margin:0 auto;
+        }
+
+        .divider{
+            width:90px;
+            height:1px;
+            background:var(--gold);
+            margin:35px auto;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section{
+            padding:100px 7%;
+            max-width:1200px;
+            margin:auto;
+        }
+
+        .intro{
+            text-align:center;
+            max-width:800px;
+        }
+
+        .intro p{
+            color:var(--muted);
+            font-size:1.05rem;
+        }
+
+        .kicker{
+            color:var(--gold);
+            text-transform:uppercase;
+            letter-spacing:.2em;
+            font-size:.72rem;
+        }
+
+        .title{
+            font-family:Cinzel,serif;
+            color:var(--gold);
+            font-size:clamp(2rem,4vw,3.3rem);
+            line-height:1.2;
+            margin:12px 0 25px;
+        }
+
+        /* CHARACTER SECTIONS */
+
+        .character{
+            display:grid;
+            grid-template-columns:420px 1fr;
+            gap:75px;
+            align-items:center;
+            border-top:1px solid var(--line);
+        }
+
+        .character.reverse{
+            grid-template-columns:1fr 420px;
+        }
+
+        .character.reverse .character-image{
+            order:2;
+        }
+
+        .character.reverse .character-content{
+            order:1;
+        }
+
+        .character-image{
+            width:100%;
+        }
+
+        .character-image img,
+        .image-placeholder{
+            width:100%;
+            aspect-ratio:3 / 4;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border:1px solid var(--line);
+            background:
+                radial-gradient(
+                    circle at 50% 35%,
+                    #243552,
+                    #111a2b 55%,
+                    #080d18
+                );
+            box-shadow:0 20px 70px rgba(0,0,0,.45);
+        }
+
+        .character-image img{
+            object-fit:cover;
+        }
+
+        .image-placeholder{
+            font-family:Cinzel,serif;
+            color:var(--gold);
+            text-align:center;
+            letter-spacing:.15em;
+            font-size:.85rem;
+            padding:30px;
+        }
+
+        .character-name{
+            font-family:Cinzel,serif;
+            color:var(--cream);
+            font-size:clamp(2.4rem,5vw,4rem);
+            line-height:1.1;
+            margin:10px 0 25px;
+        }
+
+        .character-role{
+            color:var(--gold);
+            text-transform:uppercase;
+            letter-spacing:.16em;
+            font-size:.7rem;
+            margin-bottom:25px;
+        }
+
+        .character-content p{
+            color:var(--muted);
+            margin-bottom:20px;
+        }
+
+        /* CHARACTER FACTS */
+
+        .facts{
+            display:flex;
+            flex-wrap:wrap;
+            gap:10px;
+            margin-top:30px;
+        }
+
+        .fact{
+            border:1px solid var(--line);
+            padding:8px 13px;
+            color:var(--cream);
+            font-size:.72rem;
+            letter-spacing:.05em;
+        }
+
+        /* CLOSING CTA */
+
+        .closing{
+            text-align:center;
+            background:
+                linear-gradient(
+                    180deg,
+                    #0b1220,
+                    #111a2b,
+                    #0b1220
+                );
+            max-width:none;
+        }
+
+        .closing-inner{
+            max-width:750px;
+            margin:auto;
+        }
+
+        .closing p{
+            color:var(--muted);
+            margin-bottom:30px;
+        }
+
+        .button{
+            display:inline-block;
+            border:1px solid var(--gold);
+            padding:13px 25px;
+            color:var(--gold);
+            letter-spacing:.12em;
+            text-transform:uppercase;
+            font-size:.75rem;
+            transition:.2s ease;
+        }
+
+        .button:hover{
+            background:var(--gold);
+            color:var(--navy);
+        }
+
+        /* PUBLISHER */
+
+        .publisher{
+            text-align:center;
+            padding:60px 7%;
+            border-top:1px solid var(--line);
+            border-bottom:1px solid var(--line);
+            max-width:900px;
+            margin:auto;
+        }
+
+        .publisher img{
+            width:75px;
+            height:75px;
+            object-fit:contain;
+            display:block;
+            margin:18px auto 15px;
+        }
+
+        .publisher p{
+            color:var(--muted);
+            margin:0;
+        }
+
+        /* FOOTER */
+
+        footer{
+            text-align:center;
+            padding:50px 7%;
+            border-top:1px solid var(--line);
+            color:var(--muted);
+            font-size:.8rem;
+        }
+
+        .social{
+            margin-top:15px;
+            color:var(--gold);
+        }
+
+        .social a{
+            color:inherit;
+            text-decoration:none;
+            margin:0 8px;
+        }
+
+        .social a:hover{
+            opacity:.75;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:800px){
+
+            .nav{
+                padding:12px 5%;
+                flex-direction:column;
+                gap:10px;
+            }
+
+            .navlinks{
+                display:flex;
+                gap:14px;
+                flex-wrap:wrap;
+                justify-content:center;
+                font-size:.62rem;
+            }
+
+            .hero{
+                min-height:auto;
+                padding-top:140px;
+                padding-bottom:70px;
+            }
+
+            section{
+                padding:75px 7%;
+            }
+
+            .character,
+            .character.reverse{
+                grid-template-columns:1fr;
+                gap:40px;
+            }
+
+            .character.reverse .character-image,
+            .character.reverse .character-content{
+                order:initial;
+            }
+
+            .character-image{
+                max-width:430px;
+                margin:auto;
+            }
+
+            .character-content{
+                text-align:center;
+            }
+
+            .character-role{
+                margin-bottom:20px;
+            }
+
+            .facts{
+                justify-content:center;
+            }
+
+            .closing{
+                padding:80px 7%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="nav">
+
+        <a class="brand" href="index.html">
+            C. J. SHELFORD
+        </a>
+
+        <div class="navlinks">
+
+            <a href="index.html#book">
+                The Book
+            </a>
+
+            <a href="index.html#author">
+                About
+            </a>
+
+            <a href="index.html#world">
+                The Four Realms
+            </a>
+
+            <a href="characters.html">
+                Characters
+            </a>
+
+            <a href="favourite-books.html">
+                Favourite Books
+            </a>
+
+            <a href="index.html#newsletter">
+                Newsletter
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-inner">
+
+            <div class="eyebrow">
+                Where Whispers Gather
+            </div>
+
+            <h1>
+                Meet the Characters
+            </h1>
+
+            <div class="divider"></div>
+
+            <h2>
+                Two very different lives. One impossible journey.
+            </h2>
+
+        </div>
+
+    </header>
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="intro">
+
+        <div class="kicker">
+            The Characters
+        </div>
+
+        <div class="title">
+            Zethan &amp; Valerious
+        </div>
+
+        <p>
+            In a world shaped by magic, power and four ancient realms,
+            a palace servant and a prince are brought together under
+            circumstances neither of them could have imagined.
+        </p>
+
+        <p>
+            Get to know the two men at the heart of
+            <em>Where Whispers Gather</em>.
+        </p>
+
+    </section>
+
+
+    <!-- ZETHAN -->
+
+    <section class="character">
+
+        <div class="character-image">
+
+            <!-- Replace this placeholder with your Zethan image -->
+            <!-- Example:
+            <img src="zethan.png" alt="Zethan from Where Whispers Gather">
+            -->
+            <img src="zethan.png" alt="Zethan from Where Whispers Gather">
+            <div class="image-placeholder">
+                ZETHAN<br>
+                PORTRAIT
+            </div>
+
+        </div>
+
+
+        <div class="character-content">
+
+            <div class="kicker">
+                The Servant
+            </div>
+
+            <div class="character-name">
+                Zethan
+            </div>
+
+            <div class="character-role">
+                Palace Servant · Autumn Realm
+            </div>
+
+            <p>
+                Zethan is a quietly intelligent, dryly humorous palace
+                servant who has learned to survive by observing rather
+                than demanding attention.
+            </p>
+
+            <p>
+                Polite on the surface and sharper underneath, he's
+                remarkably good at reading people—especially nobles
+                who mistake his position for stupidity.
+            </p>
+
+            <p>
+                He's curious, practical and stubborn, with a soft heart
+                he doesn't advertise. He appreciates good food, simple
+                comforts and the rare moments when nobody expects
+                anything from him.
+            </p>
+
+            <p>
+                He isn't fearless; he's simply the sort of person who
+                keeps going while frightened.
+            </p>
+
+            <p>
+                And beneath the ordinary servant everyone overlooks is
+                a power capable of changing everything.
+            </p>
+
+
+            <div class="facts">
+
+                <div class="fact">
+                    Age · 23
+                </div>
+
+                <div class="fact">
+                    Realm · Autumn
+                </div>
+
+                <div class="fact">
+                    Palace Servant
+                </div>
+
+                <div class="fact">
+                    Quietly Intelligent
+                </div>
+
+                <div class="fact">
+                    Dry Humour
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VALERIOUS -->
+
+    <section class="character reverse">
+
+        <div class="character-image">
+
+            <!-- Replace this placeholder with your Valerious image -->
+            <!-- Example:
+            <img src="valerious.jpg" alt="Valerious from Where Whispers Gather">
+            -->
+            <img src="valerious.PNG" alt="Valerious from Where Whispers Gather">
+
+            <div class="image-placeholder">
+                VALERIOUS<br>
+                PORTRAIT
+            </div>
+
+        </div>
+
+
+        <div class="character-content">
+
+            <div class="kicker">
+                The Prince
+            </div>
+
+            <div class="character-name">
+                Valerious
+            </div>
+
+            <div class="character-role">
+                Prince · Summer Realm
+            </div>
+
+            <p>
+                Valerious has been raised within nobility, but he isn't
+                simply defined by his title.
+            </p>
+
+            <p>
+                He carries himself with the confidence expected of a
+                prince, yet there's more to him than the position he
+                holds. He is accustomed to a world where people know
+                who he is, where his decisions carry weight and where
+                his existence is closely tied to the power of the
+                Autumn court.
+            </p>
+
+            <p>
+                Then he is abducted.
+            </p>
+
+            <p>
+                Separated from everything familiar, Valerious is forced
+                into a situation where his title can no longer protect
+                him. His relationship with Zethan begins under
+                extraordinary circumstances, and what develops between
+                them challenges the boundaries between prince and servant.
+            </p>
+
+            <p>
+                There is still much about Valerious that remains hidden.
+            </p>
+
+            <p>
+                And perhaps that's exactly how he likes it.
+            </p>
+
+
+            <div class="facts">
+
+                <div class="fact">
+                    Age · 24
+                </div>
+
+                <div class="fact">
+                    Realm · Autumn
+                </div>
+
+                <div class="fact">
+                    Prince
+                </div>
+
+                <div class="fact">
+                    Noble
+                </div>
+
+                <div class="fact">
+                    Heir to the Court
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CLOSING -->
+
+    <section class="closing">
+
+        <div class="closing-inner">
+
+            <div class="kicker">
+                Where Whispers Gather
+            </div>
+
+            <div class="title">
+                Their story is only beginning.
+            </div>
+
+            <p>
+                Forbidden love. Deadly trials. Fierce friendships.
+                Bitter betrayal.
+            </p>
+
+            <a class="button" href="index.html#book">
+                Discover the Book →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- PUBLISHER -->
+
+    <section class="publisher">
+
+        <div class="kicker">
+            Published by
+        </div>
+
+        <img src="IMG_3136.PNG" alt="Crystal Quartz Press">
+
+        <p>
+            Crystal Quartz Press
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+            © C. J. Shelford
+        </div>
+
+        <div class="social">
+
+            <a href="https://www.tiktok.com/@c.j.shelford"
+               target="_blank"
+               rel="noopener">
+                TikTok
+            </a>
+
+            <a href="https://www.instagram.com/cjshelfordbooks"
+               target="_blank"
+               rel="noopener">
+                Instagram
+            </a>
+
+            <a href="https://www.facebook.com/share/19MteDxyEf/?mibextid=wwXIfr"
+               target="_blank"
+               rel="noopener">
+                Facebook
+            </a>
+
+            <a href="mailto:hello@cjshelford.com">
+                Email
+            </a>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
