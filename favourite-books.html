@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,7 +9,10 @@
 
 <meta name="description" content="Discover some of C. J. Shelford's favourite books, from romantasy and fantasy to romance and unforgettable stories.">
 
+<link rel="icon" type="image/png" href="IMG_3136.PNG">
+
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
 
 :root{
@@ -70,9 +74,9 @@ a{
 
 .navlinks{
     display:flex;
-    gap:28px;
-    font-size:.78rem;
-    letter-spacing:.12em;
+    gap:24px;
+    font-size:.72rem;
+    letter-spacing:.1em;
     text-transform:uppercase;
     color:var(--muted)
 }
@@ -140,7 +144,7 @@ a{
 /* =========================
    GENERAL SECTIONS
    ========================= */
-    
+
 section{
     padding:100px 7%;
     max-width:1200px;
@@ -160,28 +164,6 @@ section{
     font-size:clamp(2rem,4vw,3.3rem);
     line-height:1.2;
     margin:12px 0 25px
-}
-
-.publisher{
-    text-align:center;
-    padding:60px 7%;
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-    max-width:900px;
-    margin:auto;
-}
-
-.publisher img{
-    width:75px;
-    height:75px;
-    object-fit:contain;
-    display:block;
-    margin:18px auto 15px;
-}
-
-.publisher p{
-    color:var(--muted);
-    margin:0;
 }
 
 
@@ -215,7 +197,7 @@ section{
 
 .books{
     max-width:1100px;
-    margin:0 auto;
+    margin:0 auto
 }
 
 .books-heading{
@@ -234,66 +216,6 @@ section{
 
 .book:last-child{
     border-bottom:1px solid var(--line)
-}
-
-/* BOOKSHOP.ORG FEATURE */
-
-.bookshop-section{
-    max-width:900px;
-    margin:0 auto;
-    padding:80px 7%;
-    text-align:center;
-}
-
-.bookshop-section .kicker{
-    color:var(--gold);
-    text-transform:uppercase;
-    letter-spacing:.2em;
-    font-size:.72rem;
-}
-
-.bookshop-section .title{
-    font-family:Cinzel,serif;
-    color:var(--gold);
-    font-size:clamp(2rem,4vw,3rem);
-    line-height:1.2;
-    margin:12px 0 15px;
-}
-
-.bookshop-intro{
-    max-width:650px;
-    margin:0 auto 35px;
-    color:var(--muted);
-}
-
-/* Container around the Bookshop widget */
-
-.bookshop-widget{
-    max-width:650px;
-    margin:40px auto 20px;
-    padding:30px;
-    background:linear-gradient(
-        145deg,
-        #111a2b,
-        #0b1220
-    );
-    border:1px solid var(--line);
-    box-shadow:0 20px 60px rgba(0,0,0,.35);
-}
-
-/* Keep the Bookshop embed centred */
-
-.bookshop-widget > *{
-    margin-left:auto;
-    margin-right:auto;
-}
-
-.bookshop-disclosure{
-    max-width:650px;
-    margin:25px auto 0;
-    color:var(--muted);
-    font-size:.72rem;
-    line-height:1.6;
 }
 
 
@@ -370,7 +292,7 @@ section{
 
 
 /* =========================
-   BOOKSHOP BUTTON
+   BUTTON
    ========================= */
 
 .button{
@@ -391,17 +313,98 @@ section{
 
 
 /* =========================
-   BOOKSHOP PROFILE SECTION
+   BOOKSHOP.ORG SECTION
    ========================= */
 
 .bookshop-section{
-    text-align:center;
-    max-width:850px
+    max-width:900px;
+    margin:0 auto;
+    padding:90px 7%;
+    text-align:center
 }
 
-.bookshop-section p{
+.bookshop-section .title{
+    margin-bottom:15px
+}
+
+.bookshop-intro{
+    max-width:650px;
+    margin:0 auto 40px;
+    color:var(--muted)
+}
+
+.bookshop-widget{
+    width:100%;
+    max-width:650px;
+    margin:40px auto;
+    padding:30px;
+    background:
+        linear-gradient(
+            145deg,
+            #111a2b,
+            #0b1220
+        );
+    border:1px solid var(--line);
+    box-shadow:0 20px 60px rgba(0,0,0,.4);
+    overflow:hidden
+}
+
+.bookshop-widget iframe{
+    display:block;
+    max-width:100%;
+    margin:auto;
+    border:0
+}
+
+.bookshop-disclosure{
+    max-width:650px;
+    margin:25px auto 0;
+    color:var(--muted);
+    font-size:.72rem;
+    line-height:1.6
+}
+
+
+/* =========================
+   BOOKSHOP PROFILE
+   ========================= */
+
+.bookshop-profile{
+    max-width:850px;
+    text-align:center
+}
+
+.bookshop-profile p{
     max-width:700px;
-    margin:0 auto 30px
+    margin:0 auto 30px;
+    color:var(--muted)
+}
+
+
+/* =========================
+   PUBLISHER
+   ========================= */
+
+.publisher{
+    text-align:center;
+    padding:60px 7%;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    max-width:900px;
+    margin:auto
+}
+
+.publisher img{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+    display:block;
+    margin:18px auto 15px
+}
+
+.publisher p{
+    color:var(--muted);
+    margin:0
 }
 
 
@@ -424,7 +427,8 @@ footer{
 
 .social a{
     color:inherit;
-    text-decoration:none
+    text-decoration:none;
+    margin:0 8px
 }
 
 .social a:hover{
@@ -438,8 +442,18 @@ footer{
 
 @media(max-width:800px){
 
+    .nav{
+        padding:12px 5%;
+        flex-direction:column;
+        gap:10px
+    }
+
     .navlinks{
-        display:none
+        display:flex;
+        gap:14px;
+        flex-wrap:wrap;
+        justify-content:center;
+        font-size:.62rem
     }
 
     section{
@@ -448,7 +462,7 @@ footer{
 
     .hero{
         min-height:60vh;
-        padding-top:130px
+        padding-top:140px
     }
 
     .book{
@@ -468,6 +482,14 @@ footer{
         margin-right:auto
     }
 
+    .bookshop-section{
+        padding:75px 5%
+    }
+
+    .bookshop-widget{
+        padding:15px
+    }
+
 }
 
 @media(max-width:500px){
@@ -481,7 +503,9 @@ footer{
     }
 
 }
+
 </style>
+
 </head>
 
 <body>
@@ -511,6 +535,10 @@ footer{
             The Four Realms
         </a>
 
+        <a href="characters.html">
+            Characters
+        </a>
+
         <a href="favourite-books.html">
             Favourite Books
         </a>
@@ -518,7 +546,6 @@ footer{
         <a href="index.html#newsletter">
             Newsletter
         </a>
-        <a href="characters.html">Characters</a>
 
     </div>
 
@@ -616,29 +643,15 @@ footer{
     </div>
 
 
-    <!-- =========================
-         BOOK 1
-         ========================= -->
+    <!-- BOOK 1 -->
 
     <article class="book">
 
         <div class="book-cover">
 
-            <!--
-            ==================================================
-            BOOK COVER 1
-
-            Replace BOOK_COVER_1.jpg with your image filename.
-
-            Example:
-            <img src="book-cover.jpg"
-                 alt="Book Title by Author Name">
-            ==================================================
-            -->
-
-            <div class="cover-placeholder">
-                <img src="a-marvellous-light-3-2.jpg" alt="A Marvellous Light">
-            </div>
+            <img
+                src="a-marvellous-light-3-2.jpg"
+                alt="A Marvellous Light by Freya Marske">
 
         </div>
 
@@ -657,22 +670,25 @@ footer{
             </div>
 
             <p class="book-description">
-                Freya Marske’s A Marvellous Light is a captivating queer historical fantasy that blends Edwardian elegance with a thrilling magical mystery. The story follows Robin Blyth, a charmingly ordinary civil servant who is accidentally assigned to a hidden magical bureau, only to be struck by a deadly curse. To save his life and uncover a high-stakes conspiracy, Robin must team up with Edwin Courcey, a prickly, magically underpowered scholar. As the two men unravel a web of ancient secrets, their forced alliance gives way to a deeply moving, slow-burn romance, making this book perfect for fans of intricate world-building, witty banter, and historical romance.
+                Freya Marske’s A Marvellous Light is a captivating queer
+                historical fantasy that blends Edwardian elegance with
+                a thrilling magical mystery. The story follows Robin Blyth,
+                a charmingly ordinary civil servant who is accidentally
+                assigned to a hidden magical bureau, only to be struck by
+                a deadly curse. To save his life and uncover a high-stakes
+                conspiracy, Robin must team up with Edwin Courcey, a
+                prickly, magically underpowered scholar. As the two men
+                unravel a web of ancient secrets, their forced alliance
+                gives way to a deeply moving, slow-burn romance, making
+                this book perfect for fans of intricate world-building,
+                witty banter, and historical romance.
             </p>
 
-            <!--
-            ==================================================
-            BOOKSHOP LINK 1
-
-            Replace BOOKSHOP_LINK_1 with the actual
-            Bookshop.org link for this book.
-            ==================================================
-            -->
-
-            <a class="button"
-               href="https://uk.bookshop.org/a/18245/9781529080902"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+                class="button"
+                href="https://uk.bookshop.org/a/18245/9781529080902"
+                target="_blank"
+                rel="noopener noreferrer">
 
                 View on Bookshop.org
 
@@ -683,17 +699,15 @@ footer{
     </article>
 
 
-    <!-- =========================
-         BOOK 2
-         ========================= -->
+    <!-- BOOK 2 -->
 
     <article class="book">
 
         <div class="book-cover">
 
-            <div class="cover-placeholder">
-                <img src="Power.jpeg" alt="A Power Unbound">
-            </div>
+            <img
+                src="Power.jpeg"
+                alt="A Power Unbound by Freya Marske">
 
         </div>
 
@@ -712,13 +726,21 @@ footer{
             </div>
 
             <p class="book-description">
-                A Power Unbound by Freya Marske is the steamy and spellbinding final instalment of The Last Binding queer historical fantasy trilogy. Published in November 2023, this alternative Edwardian England story follows a reluctant, traumatised aristocrat and a cynical, working-class thief as they fight their mutual attraction and race to stop a conspiracy that threatens to upend the foundations of British magic.
+                A Power Unbound by Freya Marske is the steamy and
+                spellbinding final instalment of The Last Binding queer
+                historical fantasy trilogy. Published in November 2023,
+                this alternative Edwardian England story follows a
+                reluctant, traumatised aristocrat and a cynical,
+                working-class thief as they fight their mutual attraction
+                and race to stop a conspiracy that threatens to upend the
+                foundations of British magic.
             </p>
 
-            <a class="button"
-               href="https://uk.bookshop.org/a/18245/9781529081008"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+                class="button"
+                href="https://uk.bookshop.org/a/18245/9781529081008"
+                target="_blank"
+                rel="noopener noreferrer">
 
                 View on Bookshop.org
 
@@ -731,7 +753,9 @@ footer{
 </section>
 
 
-<!-- Bookshop Test-->
+<!-- =========================
+     WHERE WHISPERS GATHER
+     ========================= -->
 
 <section class="bookshop-section">
 
@@ -767,36 +791,12 @@ footer{
 
 </section>
 
-<section>
-    <article>
-        <div>
-            <script src="https://uk.bookshop.org/widgets.js" data-type="book" data-affiliate-id="18245" data-sku="9781835983652"></script>
-        </div>
-    </article>
-</section>
-
-
-<section>
-    <article>
-        <div>
-            <script src="https://uk.bookshop.org/widgets.js" data-type="featured" data-full-info="true" data-affiliate-id="18245" data-sku="9781835983652"></script>
-        </div>
-    </article>
-</section>\
-
-<section>
-    <article>
-        <div>
-            <script src="https://uk.bookshop.org/widgets.js" data-type="book_button" data-affiliate-id="18245" data-sku="9781835983652"></script>
-        </div>
-    </article>
-</section>
 
 <!-- =========================
      BOOKSHOP PROFILE
      ========================= -->
 
-<section class="bookshop-section">
+<section class="bookshop-profile">
 
     <div class="kicker">
         Find more books
@@ -811,23 +811,36 @@ footer{
         I'll be adding new favourites as I discover them.
     </p>
 
-    <!--
-    ==========================================================
-    BOOKSHOP PROFILE LINK
-
-    Replace BOOKSHOP_PROFILE_LINK with your Bookshop.org
-    profile/list URL when you have it.
-    ==========================================================
-    -->
-
-    <a class="button"
-       href="https://uk.bookshop.org/shop/cjshelford"
-       target="_blank"
-       rel="noopener noreferrer">
+    <a
+        class="button"
+        href="https://uk.bookshop.org/shop/cjshelford"
+        target="_blank"
+        rel="noopener noreferrer">
 
         Visit My Bookshop.org List
 
     </a>
+
+</section>
+
+
+<!-- =========================
+     PUBLISHER
+     ========================= -->
+
+<section class="publisher">
+
+    <div class="kicker">
+        Published by
+    </div>
+
+    <img
+        src="IMG_3136.PNG"
+        alt="Crystal Quartz Press">
+
+    <p>
+        Crystal Quartz Press
+    </p>
 
 </section>
 
@@ -842,33 +855,38 @@ footer{
         © 2026 C. J. Shelford · Where Whispers Gather
     </div>
 
-    <div class="social" aria-label="C. J. Shelford social media and contact links">
+    <div
+        class="social"
+        aria-label="C. J. Shelford social media and contact links">
 
-        <a href="https://www.tiktok.com/@c.j.shelford"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a
+            href="https://www.tiktok.com/@c.j.shelford"
+            target="_blank"
+            rel="noopener noreferrer">
             TikTok
         </a>
 
         ·
 
-        <a href="https://www.instagram.com/cjshelfordbooks"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a
+            href="https://www.instagram.com/cjshelfordbooks"
+            target="_blank"
+            rel="noopener noreferrer">
             Instagram
         </a>
 
         ·
 
-        <a href="https://www.facebook.com/share/19MteDxyEf/?mibextid=wwXIfr"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a
+            href="https://www.facebook.com/share/19MteDxyEf/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer">
             Facebook
         </a>
 
         ·
 
-        <a href="mailto:hello@cjshelford.co.uk">
+        <a href="mailto:hello@cjshelford.com">
             Email
         </a>
 
