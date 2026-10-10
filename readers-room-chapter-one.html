@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A private-feeling reading page for the Readers Room — Where Whispers Gather by C. J. Shelford.">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Chapter One | Readers Room | C. J. Shelford</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #080d18;
+      --navy-light: #111a2b;
+      --gold: #c9ad72;
+      --cream: #f2ead9;
+      --muted: #c9c2b5;
+      --line: rgba(201, 173, 114, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--navy);
+      color: var(--cream);
+      font-family: "Libre Baskerville", Georgia, serif;
+      line-height: 1.9;
+    }
+
+    a { color: var(--gold); }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .site-header {
+      padding: 1.4rem 1.25rem;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+      background: rgba(17, 26, 43, 0.75);
+    }
+
+    .brand {
+      margin: 0;
+      color: var(--gold);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(1rem, 3vw, 1.3rem);
+      letter-spacing: 0.16em;
+      font-weight: 600;
+    }
+
+    .brand-subtitle {
+      margin: 0.45rem 0 0;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    main {
+      width: min(100% - 2rem, 760px);
+      margin: 0 auto;
+      padding: 3.5rem 0 5rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.8rem;
+      color: var(--gold);
+      text-align: center;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--cream);
+      text-align: center;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .book-title {
+      margin: 1rem 0 2.6rem;
+      color: var(--gold);
+      text-align: center;
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    .ornament {
+      width: 90px;
+      height: 1px;
+      margin: 0 auto 2.8rem;
+      background: var(--gold);
+      opacity: 0.7;
+    }
+
+    .chapter-text {
+      font-size: 1rem;
+      overflow-wrap: anywhere;
+    }
+
+    .chapter-text p {
+      margin: 0 0 1.35em;
+    }
+
+    .chapter-text .loading,
+    .chapter-text .error {
+      padding: 1.25rem;
+      border: 1px solid var(--line);
+      background: var(--navy-light);
+      color: var(--muted);
+      text-align: center;
+      font-style: italic;
+    }
+
+    .page-footer {
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .back-link {
+      display: inline-block;
+      padding: 0.75rem 1.15rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .back-link:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .copyright {
+      margin: 1.5rem 0 0;
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+
+    /* Deters casual text selection; it cannot prevent determined copying. */
+    .protected-reading {
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    @media (max-width: 600px) {
+      main { padding-top: 2.5rem; }
+      .chapter-text { font-size: 0.94rem; line-height: 1.85; }
+    }
+
+    @media print {
+      body { background: #fff; color: #000; }
+      .site-header, .page-footer { display: none; }
+      main { width: 100%; padding: 0; }
+      h1, .book-title, .eyebrow { color: #000; }
+      .protected-reading { user-select: text; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <p class="brand">C. J. SHELFORD</p>
+    <p class="brand-subtitle">The Readers Room</p>
+  </header>
+
+  <main>
+    <p class="eyebrow">Exclusive Reading</p>
+    <h1>Chapter One</h1>
+    <p class="book-title">Where Whispers Gather · The Four Realms, Book One</p>
+    <div class="ornament" aria-hidden="true"></div>
+
+    <article id="chapter-content" class="chapter-text protected-reading" aria-label="Chapter One">
+      <p class="loading">Loading your chapter…</p>
+    </article>
+
+    <div class="page-footer">
+      <a class="back-link" href="readers-room.html">← Back to the Readers Room</a>
+      <p class="copyright">© C. J. Shelford. All rights reserved.</p>
+    </div>
+  </main>
+
+  <script>
+    /*
+      Keep the chapter prose in a separate file named "chapter-one.txt"
+      in the same folder as this HTML file. Separate paragraphs with a
+      blank line. The text file must be published alongside this page.
+    */
+    document.addEventListener("DOMContentLoaded", async function () {
+      const chapter = document.getElementById("chapter-content");
+
+      try {
+        const response = await fetch("chapter-one.txt", { cache: "no-store" });
+        if (!response.ok) throw new Error("Chapter file could not be loaded.");
+
+        const text = await response.text();
+        const paragraphs = text.trim().split(/\r?\n\s*\r?\n/).filter(Boolean);
+
+        chapter.replaceChildren();
+
+        if (!paragraphs.length) {
+          throw new Error("The chapter file is empty.");
+        }
+
+        paragraphs.forEach(function (paragraphText) {
+          const p = document.createElement("p");
+          // Render as plain text, not HTML, to avoid interpreting file content as markup.
+          p.textContent = paragraphText.replace(/\r?\n/g, " ").trim();
+          chapter.appendChild(p);
+        });
+      } catch (error) {
+        chapter.replaceChildren();
+        const message = document.createElement("p");
+        message.className = "error";
+        message.textContent = "The chapter could not be loaded. Please try again later.";
+        chapter.appendChild(message);
+      }
+
+      // Deters casual copying inside the chapter only.
+      chapter.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+      });
+
+      chapter.addEventListener("copy", function (event) {
+        event.preventDefault();
+      });
+
+      chapter.addEventListener("cut", function (event) {
+        event.preventDefault();
+      });
+
+      chapter.addEventListener("dragstart", function (event) {
+        event.preventDefault();
+      });
+
+      chapter.addEventListener("keydown", function (event) {
+        if ((event.ctrlKey || event.metaKey) &&
+            ["c", "x", "a"].includes(event.key.toLowerCase())) {
+          event.preventDefault();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
