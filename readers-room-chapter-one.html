@@ -189,7 +189,7 @@
     </article>
 
     <div class="page-footer">
-      <a class="back-link" href="readers-room.html">← Back to the Readers Room</a>
+      <a class="back-link" href="../readers-room.html">← Back to the Readers Room</a>
       <p class="copyright">© C. J. Shelford. All rights reserved.</p>
     </div>
   </main>
@@ -204,7 +204,7 @@
       const chapter = document.getElementById("chapter-content");
 
       try {
-        const response = await fetch("chapter-one.txt", { cache: "no-store" });
+        const response = await fetch("chapter-one.pdf", { cache: "no-store" });
         if (!response.ok) throw new Error("Chapter file could not be loaded.");
 
         const text = await response.text();
