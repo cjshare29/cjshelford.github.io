@@ -89,8 +89,14 @@
             color:var(--muted);
         }
 
-        .navlinks a:hover{
+        .navlinks a:hover,
+        .navlinks a:focus-visible{
             color:var(--gold);
+        }
+        .navlinks a:focus-visible,
+        .brand:focus-visible{
+            outline:2px solid var(--gold);
+            outline-offset:3px;
         }
 
         /* HERO */
@@ -478,25 +484,43 @@
         footer { background:var(--navy); color:#d7d2c7; border-top:0; }
         .social { color:#e0c58a; }
         @media(max-width:800px) {
+            /* Stack the author name above a compact, wrapping set of links.
+               This keeps the links readable instead of squeezing them into
+               a narrow horizontal strip on small screens. */
             .nav {
-                padding:10px 4%;
-                flex-direction:row;
-                justify-content:space-between;
-                gap:12px;
+                padding:9px 12px 8px;
+                flex-direction:column;
+                justify-content:center;
+                align-items:stretch;
+                gap:6px;
+                transition:transform .28s ease, background .28s ease;
             }
-            .brand { font-size:.72rem; white-space:nowrap; }
-            .navlinks {
-                flex-wrap:nowrap;
-                justify-content:flex-end;
-                gap:12px;
-                overflow-x:auto;
+            .brand {
+                align-self:center;
+                font-size:.72rem;
+                line-height:1.4;
                 white-space:nowrap;
-                max-width:72%;
-                font-size:.58rem;
-                scrollbar-width:none;
             }
-            .navlinks::-webkit-scrollbar { display:none; }
-            .hero { padding-top:115px; padding-bottom:60px; }
+            .navlinks {
+                display:flex;
+                flex-wrap:wrap;
+                justify-content:center;
+                align-items:center;
+                gap:4px 12px;
+                width:100%;
+                max-width:100%;
+                overflow:visible;
+                white-space:normal;
+                font-size:.58rem;
+                line-height:1.5;
+                letter-spacing:.06em;
+            }
+            .navlinks a {
+                display:inline-block;
+                padding:2px 0;
+                white-space:nowrap;
+            }
+            .hero { padding-top:145px; padding-bottom:60px; }
         }
         @media(prefers-reduced-motion:reduce) {
             .nav { transition:none; }
