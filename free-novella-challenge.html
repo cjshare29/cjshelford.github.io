@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Help Unlock a Free Novella | C. J. Shelford</title>
+  <meta name="description" content="Help unlock a free fantasy novella set in the world of The Four Realms. Join C. J. Shelford's 100-reader challenge.">
+
+  <meta name="theme-color" content="#080d18">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #080d18;
+      --navy-light: #111a2b;
+      --gold: #c9ad72;
+      --cream: #f2ead9;
+      --muted: #c1b8a7;
+      --border: rgba(201, 173, 114, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behaviour: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--navy);
+      color: var(--cream);
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    a {
+      color: var(--gold);
+    }
+
+    .site-header {
+      padding: 24px 20px;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .brand {
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      letter-spacing: 3px;
+      text-decoration: none;
+    }
+
+    .brand-subtitle {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 85px 22px 65px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 0%,
+          rgba(201, 173, 114, 0.12), transparent 65%),
+        var(--navy);
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cinzel', Georgia, serif;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin: 22px auto;
+      color: var(--cream);
+      font-size: clamp(30px, 6vw, 52px);
+      letter-spacing: 1px;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .crystal {
+      display: block;
+      margin: 28px auto;
+      color: var(--gold);
+      font-size: 27px;
+      line-height: 1;
+    }
+
+    .challenge-number {
+      display: inline-block;
+      margin: 12px 0 26px;
+      padding: 12px 25px;
+      border: 1px solid var(--border);
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    .section {
+      padding: 65px 22px;
+    }
+
+    .section-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .story-section {
+      background: var(--navy-light);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--gold);
+      font-size: clamp(23px, 4vw, 31px);
+      text-align: center;
+    }
+
+    p {
+      margin: 0 0 20px;
+    }
+
+    .story-copy {
+      color: var(--muted);
+    }
+
+    .story-copy p:first-child {
+      color: var(--cream);
+      font-size: 17px;
+    }
+
+    .signup-section {
+      text-align: center;
+    }
+
+    .signup-section h2 {
+      margin-bottom: 15px;
+    }
+
+    .signup-intro {
+      max-width: 590px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+    }
+
+    .form-shell {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      background: var(--navy-light);
+      text-align: left;
+    }
+
+    /* Kit form styling: applies where Kit's embed
+       allows the website's styles to reach its fields. */
+
+    .form-shell input[type="email"],
+    .form-shell input[type="text"] {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      background: var(--navy);
+      color: var(--cream);
+      font: inherit;
+    }
+
+    .form-shell input::placeholder {
+      color: var(--muted);
+    }
+
+    .form-shell button,
+    .form-shell input[type="submit"] {
+      width: 100%;
+      margin-top: 14px;
+      padding: 15px 18px;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      background: var(--gold);
+      color: var(--navy);
+      cursor: pointer;
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .form-shell button:hover,
+    .form-shell input[type="submit"]:hover {
+      background: var(--cream);
+      border-color: var(--cream);
+    }
+
+    .privacy-note {
+      margin: 20px auto 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .closing {
+      padding: 45px 22px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .closing p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .home-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+
+    .site-footer {
+      padding: 22px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 60px 20px 48px;
+      }
+
+      .section {
+        padding: 48px 20px;
+      }
+
+      .form-shell {
+        padding: 20px;
+      }
+
+      .brand {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="https://cjshelford.co.uk/">
+      C. J. SHELFORD
+    </a>
+    <div class="brand-subtitle">Fantasy · Romance · Other Realms</div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="eyebrow">A reader-powered challenge</div>
+
+      <h1>Help Unlock a Free Novella!</h1>
+
+      <p class="hero-description">
+        One hundred readers. One new story.
+        Help bring another corner of The Four Realms to life.
+      </p>
+
+      <span class="crystal" aria-hidden="true">◇</span>
+
+      <div class="challenge-number">
+        THE 100-READER CHALLENGE
+      </div>
+
+      <p class="hero-description">
+        If 100 readers sign up, I'll work towards creating
+        a free bonus novella set in the world of my fantasy series.
+      </p>
+    </section>
+
+    <section class="section story-section">
+      <div class="section-inner">
+        <h2>A Glimpse Beyond the Story</h2>
+
+        <div class="story-copy">
+          <p>
+            What lies beyond the pages of
+            <em>Where Whispers Gather</em>?
+          </p>
+
+          <p>
+            I've been thinking about exploring more of the Four Realms
+            and giving readers a chance to discover a different side
+            of this world.
+          </p>
+
+          <p>
+            Imagine returning to Estariel, the Summer Realm, and
+            discovering more of Prince Valerious's life before his
+            diplomatic journey to the Autumn Realm.
+          </p>
+
+          <p>
+            That's one possibility I'm considering. The story will
+            take shape as the challenge develops, so there's plenty
+            still to discover.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section signup-section" id="signup">
+      <div class="section-inner">
+        <div class="eyebrow">Be part of the story</div>
+
+        <h2>Help Us Reach 100</h2>
+
+        <p class="signup-intro">
+          Sign up below to join the challenge and follow the journey.
+          If we reach our target, I'll work towards bringing you
+          a free bonus novella.
+        </p>
+
+        <div class="form-shell">
+
+        <script async data-uid="58e076ebee" src="https://cjshelford.kit.com/58e076ebee/index.js"></script>
+
+          <p style="text-align:center; color:#c9ad72;">
+            Your next adventure could start here.
+          </p>
+
+          <p style="text-align:center; color:#c1b8a7; font-size:13px;">
+            [Your Kit signup form will appear here.]
+          </p>
+
+        </div>
+
+        <p class="privacy-note">
+          By signing up, you'll receive author news and updates
+          from C. J. Shelford, including information about the challenge.
+          You can unsubscribe at any time.
+        </p>
+      </div>
+    </section>
+
+    <section class="closing">
+      <span class="crystal" aria-hidden="true">◇</span>
+
+      <p>
+        Every realm begins with a story.
+        Help me discover the next one.
+      </p>
+
+      <a class="home-link" href="https://cjshelford.co.uk/">
+        ← RETURN TO C. J. SHELFORD
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    &copy; <span id="copyright-year">2026</span> C. J. Shelford.
+    All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('copyright-year').textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
