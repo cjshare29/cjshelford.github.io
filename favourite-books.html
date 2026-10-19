@@ -563,8 +563,18 @@ a:focus-visible{outline:3px solid #927034;outline-offset:4px;border-radius:2px}
 footer{background:var(--navy);color:#e8e0d0}
 .social{color:#e0c88f}
 @media(max-width:800px){
-  .nav{background:rgba(251,248,240,.98)}
-  .navlinks{line-height:1.8}
+  .nav{
+    background:rgba(251,248,240,.98);
+    padding:8px 4%;
+    gap:5px;
+    transform:translateY(0);
+    transition:transform .25s ease, padding .25s ease;
+    will-change:transform;
+  }
+  .nav.is-hidden{transform:translateY(-110%)}
+  .brand{font-size:.76rem;line-height:1.2}
+  .navlinks{line-height:1.5;gap:8px 13px;font-size:.58rem}
+  .hero{padding-top:125px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
@@ -1053,6 +1063,36 @@ The task is as complex as it is lucrative, pushing both men to the limits of the
 
 </footer>
 
+
+<script>
+/* On mobile, tuck the fixed navigation away while scrolling down and bring it back when scrolling up. */
+(() => {
+  const nav = document.querySelector('.nav');
+  if (!nav) return;
+  let lastY = window.scrollY;
+  let ticking = false;
+  const mobile = () => window.matchMedia('(max-width: 800px)').matches;
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(() => {
+      const y = window.scrollY;
+      if (!mobile() || y < 80) {
+        nav.classList.remove('is-hidden');
+      } else if (y > lastY + 4) {
+        nav.classList.add('is-hidden');
+      } else if (y < lastY - 4) {
+        nav.classList.remove('is-hidden');
+      }
+      lastY = y;
+      ticking = false;
+    });
+  }, { passive: true });
+  window.addEventListener('resize', () => {
+    if (!mobile()) nav.classList.remove('is-hidden');
+  });
+})();
+</script>
 
 </body>
 </html>
