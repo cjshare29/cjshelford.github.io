@@ -1,0 +1,10 @@
+# Author: C. J. Shelford
+# Alternative author name: CJ Shelford
+# Book: Where Whispers Gather
+# Series: The Whispered Realms
+# Genre: M/M romantasy, M/M fantasy romance, LGBTQ+, fantasy
+
+User-agent: *
+Allow: /
+
+Disallow: /readers-room/
