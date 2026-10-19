@@ -87,7 +87,8 @@ html{scroll-behavior:smooth;scroll-padding-top:130px}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:'Libre Baskerville',Georgia,serif;line-height:1.75}
 a{color:inherit;text-decoration:none}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #b8863b;outline-offset:4px}
-.nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:12px 4%;background:rgba(251,247,237,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);color:var(--ink)}
+.nav{position:sticky;top:0;z-index:10;display:flex;transition:transform .28s ease;}
+.nav.nav-hidden{transform:translateY(-110%);}justify-content:space-between;align-items:center;gap:24px;padding:12px 4%;background:rgba(251,247,237,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);color:var(--ink)}
 .brand{font-family:Cinzel,serif;letter-spacing:.1em;color:var(--ink);font-size:1.1rem;white-space:nowrap}
 .navlinks{position:relative;z-index:11;display:flex;align-items:center;gap:clamp(10px,1.7vw,25px);font-family:Arial,sans-serif;font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink)}
 .navlinks a{display:inline-block;position:relative;z-index:12;padding:8px 0;border-bottom:1px solid transparent;pointer-events:auto;cursor:pointer}
@@ -236,6 +237,32 @@ footer{text-align:center;padding:35px 7%;background:var(--navy);color:#e9dfcb;fo
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  /* On smaller screens, hide the navigation while scrolling down and reveal it when scrolling up. */
+  var nav = document.querySelector(".nav");
+  var lastScrollY = window.scrollY;
+  var scrollTicking = false;
+  function updateMobileNav() {
+    var currentY = window.scrollY;
+    if (window.matchMedia("(max-width: 900px)").matches) {
+      if (currentY <= 20 || currentY < lastScrollY - 4) {
+        nav.classList.remove("nav-hidden");
+      } else if (currentY > lastScrollY + 4 && currentY > nav.offsetHeight) {
+        nav.classList.add("nav-hidden");
+      }
+    } else {
+      nav.classList.remove("nav-hidden");
+    }
+    lastScrollY = currentY;
+    scrollTicking = false;
+  }
+  window.addEventListener("scroll", function () {
+    if (!scrollTicking) {
+      window.requestAnimationFrame(updateMobileNav);
+      scrollTicking = true;
+    }
+  }, { passive: true });
+  window.addEventListener("resize", updateMobileNav);
+
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (event) {
       var targetId = link.getAttribute("href");
