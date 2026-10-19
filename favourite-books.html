@@ -513,6 +513,61 @@ footer{
 
 }
 
+
+
+/* Updated bright fantasy theme to match the C. J. Shelford homepage */
+:root{
+    --navy:#111a2b;
+    --navy2:#1b2940;
+    --gold:#927034;
+    --cream:#fbf8f0;
+    --muted:#586171;
+    --line:rgba(146,112,52,.28)
+}
+body{background:var(--cream);color:var(--navy)}
+a:focus-visible{outline:3px solid #927034;outline-offset:4px;border-radius:2px}
+[id]{scroll-margin-top:115px}
+.nav{
+    background:rgba(251,248,240,.96);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 5px 22px rgba(17,26,43,.06)
+}
+.brand{color:#87682f}
+.navlinks{color:#515a68}
+.navlinks a:hover,.navlinks a:focus-visible,.navlinks a[aria-current="page"]{color:#87682f;text-decoration:underline;text-underline-offset:5px}
+.hero{
+    background:
+      radial-gradient(circle at 50% 22%,rgba(201,173,114,.20) 0,rgba(226,218,199,.35) 28%,transparent 58%),
+      linear-gradient(145deg,#e8e0cf 0%,#f7f2e7 52%,#e5e9ed 100%);
+    color:var(--navy);
+    border-bottom:1px solid var(--line)
+}
+.hero .eyebrow,.kicker{color:#87682f}
+.hero h1{color:var(--navy);font-size:clamp(2.4rem,6vw,4.6rem)}
+.hero h2{color:#515a68}
+.divider{background:#b69a60}
+.title{color:#87682f}
+.introduction p,.book-description{color:#343e4d}
+.bookshop-note{color:#515a68;background:rgba(255,255,255,.48)}
+.book{border-color:var(--line)}
+.book h3{color:var(--navy)}
+.book-author,.book-number{color:#87682f}
+.book-cover{background:linear-gradient(145deg,#e9e2d3,#f8f5ed);box-shadow:0 18px 42px rgba(17,26,43,.16)}
+.cover-placeholder{color:#515a68}
+.button{color:#87682f;border-color:#b69a60;border-radius:3px;transition:background .2s ease,color .2s ease}
+.button:hover,.button:focus-visible{background:#c9ad72;color:#111a2b}
+.bookshop-widget{background:linear-gradient(145deg,#fffdf8,#eee7d8);box-shadow:0 16px 42px rgba(17,26,43,.10)}
+.bookshop-intro,.bookshop-disclosure,.bookshop-profile p{color:#515a68}
+.publisher{background:rgba(255,255,255,.35)}
+.publisher p{color:#515a68}
+footer{background:var(--navy);color:#e8e0d0}
+.social{color:#e0c88f}
+@media(max-width:800px){
+  .nav{background:rgba(251,248,240,.98)}
+  .navlinks{line-height:1.8}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
 </style>
 
 </head>
@@ -531,31 +586,14 @@ footer{
     </a>
 
     <div class="navlinks">
-
-        <a href="index.html#book">
-            The Book
-        </a>
-
-        <a href="index.html#author">
-            About
-        </a>
-
-        <a href="index.html#world">
-            The Four Realms
-        </a>
-
-        <a href="characters.html">
-            Characters
-        </a>
-
-        <a href="favourite-books.html">
-            Favourite Books
-        </a>
-
-        <a href="index.html#newsletter">
-            Newsletter
-        </a>
-
+        <a href="index.html#top">Home</a>
+        <a href="index.html#book">The Book</a>
+        <a href="index.html#author">About</a>
+        <a href="index.html#world">The Whispered Realms</a>
+        <a href="characters.html">Characters</a>
+        <a href="index.html#newsletter">Newsletter</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="favourite-books.html" aria-current="page">Favourite Books</a>
     </div>
 
 </nav>
