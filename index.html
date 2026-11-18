@@ -71,7 +71,6 @@
         {"@type":"Question","name":"When will Where Whispers Gather be released?","acceptedAnswer":{"@type":"Answer","text":"Where Whispers Gather is planned for release in February 2027."}},
         {"@type":"Question","name":"What is the series called?","acceptedAnswer":{"@type":"Answer","text":"Where Whispers Gather is Book One of The Whispered Realms series."}},
         {"@type":"Question","name":"When will beta readers receive the book?","acceptedAnswer":{"@type":"Answer","text":"The manuscript is planned to go to beta readers in November 2026, ahead of further editing and the planned February 2027 release."}},
-        {"@type":"Question","name":"How can I vote on the book covers?","acceptedAnswer":{"@type":"Answer","text":"Sign up to C. J. Shelford's newsletter to receive the opportunity to vote on the potential covers for Where Whispers Gather."}},
         {"@type":"Question","name":"Is this a story about coming out or homophobia?","acceptedAnswer":{"@type":"Answer","text":"No. The story takes place in a queer-normalised world. The central barrier to the couple's relationship is the difference in their social positions: one is a servant and the other is a prince."}}
       ]
     }
@@ -102,8 +101,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #b886
   color: var(--ink);
   transition: transform 0.28s ease;
 }
-.nav.nav-hidden {
-  transform: translateY(-110%);}justify-content:space-between;align-items:center;gap:24px;padding:12px 4%;background:rgba(251,247,237,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);color:var(--ink)}
+.nav.nav-hidden{transform:translateY(-110%)}
 .brand{font-family:Cinzel,serif;letter-spacing:.1em;color:var(--ink);font-size:1.1rem;white-space:nowrap}
 .navlinks{position:relative;z-index:11;display:flex;align-items:center;gap:clamp(10px,1.7vw,25px);font-family:Arial,sans-serif;font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink)}
 .navlinks a{display:inline-block;position:relative;z-index:12;padding:8px 0;border-bottom:1px solid transparent;pointer-events:auto;cursor:pointer}
@@ -134,6 +132,7 @@ section{padding:76px 7%;max-width:1200px;margin:auto}
 .realm h3{font-family:Cinzel,serif;color:var(--ink);letter-spacing:.06em;margin:0 0 8px}
 .realm p{margin:0;font-size:.9rem}
 .newsletter{max-width:none;text-align:center;background:linear-gradient(120deg,#081827,#102840,#081827);color:var(--cream)}
+.book .newsletter{padding:30px 24px;margin-top:24px;width:100%;max-width:100%}
 .newsletter .title{color:var(--cream)}
 .newsletter .kicker{color:#e0b96f}
 .newsletter>p{max-width:700px;margin:0 auto}
@@ -174,11 +173,18 @@ footer{text-align:center;padding:35px 7%;background:var(--navy);color:#e9dfcb;fo
     <a href="favourite-books.html">Favourite Books</a>
 </div></nav>
 <header id="top" class="hero"><div class="hero-inner"><div class="eyebrow">The Whispered Realms · Book One</div><h1>WHERE WHISPERS GATHER</h1><h2>An adult M/M romantasy of forbidden love, deadly trials, magic and secrets.</h2><div class="divider"></div><a class="button" href="#book">Enter the story</a></div></header>
-<section id="book" class="book"><div><div class="kicker">The debut novel</div><div class="title">Two men. Four realms. One dangerous love.</div><p>Zethan has spent his life serving inside a palace. Valerious is the prince he was never supposed to love. When the prince is taken, Zethan is drawn into a world of deadly trials, forbidden magic and secrets that could tear the realms apart.</p><p>In this world, their love isn't forbidden because they are two men. It is forbidden because one is a servant and the other is a prince.</p><p class="release-note"><strong>Coming February 2027</strong> · Currently preparing for beta readers in November 2026.</p><a class="button" href="#newsletter">Vote on the book covers</a></div><div class="scene"><img src="where_whispers_gather_scene.png" alt="Romantic fantasy glasshouse scene from Where Whispers Gather"></div></section>
-<section class="quote"><p>“Two men fall in love. That's not the problem.”</p></section>
-<section id="author" class="about"><div><div class="kicker">About the author</div><div class="title">C. J. Shelford</div><p>I'm a UK-based writer and the author behind <em>Where Whispers Gather</em>, an adult M/M romantasy filled with forbidden love, magic, deadly trials and four magical realms.</p><p>I love creating immersive fantasy worlds where queer love is simply part of who the characters are, while the real danger comes from the world around them.</p></div><div><div class="kicker">For readers who love</div><p>✦ M/M and queer romance<br>✦ Fantasy and romantasy<br>✦ Forbidden love<br>✦ Princes and servants<br>✦ Deadly magical trials<br>✦ Secrets, power and political tension<br>✦ Darker adult fantasy</p></div></section>
-<section id="world"><div class="kicker">The world</div><div class="title">Welcome to The Whispered Realms</div><div class="realms"><div class="realm"><h3>Autumn</h3><p>Copper forests, lantern-lit streets and a realm wrapped in autumn gold.</p></div><div class="realm"><h3>Winter</h3><p>Cold, disciplined and dangerous, where strength is tested at the borders.</p></div><div class="realm"><h3>Spring</h3><p>A realm still waiting to reveal its secrets.</p></div><div class="realm"><h3>Summer</h3><p>A realm of royalty, warmth and the prince at the heart of the story.</p></div></div></section>
-<section id="newsletter" class="newsletter"><div class="kicker">Stay close to the story</div><div class="title">Follow the journey</div><p>Behind-the-scenes updates, sneak peeks, book news and the occasional secret from The Whispered Realms. Newsletter subscribers will also get the chance to vote on the potential covers for <em>Where Whispers Gather</em>.</p><script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+<section id="book" class="book">
+  <div>
+    <div class="kicker">The debut novel</div>
+    <div class="title">Two men. Four realms. One dangerous love.</div>
+    <p>Zethan has spent his life serving inside a palace. Valerious is the prince he was never supposed to love. When the prince is taken, Zethan is drawn into a world of deadly trials, forbidden magic and secrets that could tear the realms apart.</p>
+    <p>In this world, their love isn't forbidden because they are two men. It is forbidden because one is a servant and the other is a prince.</p>
+    <p class="release-note"><strong>Coming February 2027</strong> · Currently preparing for beta readers in November 2026.</p>
+<div id="newsletter" class="newsletter">
+  <div class="kicker">An exclusive first look</div>
+  <div class="title">Get your Chapter One sneak peek</div>
+  <p>Join my newsletter and receive the first instalment of an exclusive sneak peek at Chapter One of <em>Where Whispers Gather</em>. This is just the beginning: subscribers will also receive future exclusive content, behind-the-scenes updates and news from The Whispered Realms.</p>
+  <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 <form action="https://app.kit.com/forms/9939959/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9939959" data-uid="8859d9ade3" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:true},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}">
 <div data-style="clean">
 <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
@@ -221,7 +227,15 @@ footer{text-align:center;padding:35px 7%;background:var(--navy);color:#e9dfcb;fo
 #newsletter .formkit-form[data-uid="8859d9ade3"] .formkit-submit:hover span{background:rgba(0,0,0,.08)!important;}
 #newsletter .formkit-form[data-uid="8859d9ade3"] .formkit-alert{margin:15px 0;background:#0d1524;border:1px solid var(--line);color:var(--cream);border-radius:0;}
 @media(max-width:700px){#newsletter .formkit-form[data-uid="8859d9ade3"] .formkit-fields{flex-direction:column;}#newsletter .formkit-form[data-uid="8859d9ade3"] .formkit-submit{width:100%;}}
-</style></section>
+</style>
+</div>
+  </div>
+  <div class="scene"><img src="where_whispers_gather_scene.png" alt="Romantic fantasy glasshouse scene from Where Whispers Gather"></div>
+</section>
+<section class="quote"><p>“Two men fall in love. That's not the problem.”</p></section>
+<section id="author" class="about"><div><div class="kicker">About the author</div><div class="title">C. J. Shelford</div><p>I'm a UK-based writer and the author behind <em>Where Whispers Gather</em>, an adult M/M romantasy filled with forbidden love, magic, deadly trials and four magical realms.</p><p>I love creating immersive fantasy worlds where queer love is simply part of who the characters are, while the real danger comes from the world around them.</p></div><div><div class="kicker">For readers who love</div><p>✦ M/M and queer romance<br>✦ Fantasy and romantasy<br>✦ Forbidden love<br>✦ Princes and servants<br>✦ Deadly magical trials<br>✦ Secrets, power and political tension<br>✦ Darker adult fantasy</p></div></section>
+<section id="world"><div class="kicker">The world</div><div class="title">Welcome to The Whispered Realms</div><div class="realms"><div class="realm"><h3>Autumn</h3><p>Copper forests, lantern-lit streets and a realm wrapped in autumn gold.</p></div><div class="realm"><h3>Winter</h3><p>Cold, disciplined and dangerous, where strength is tested at the borders.</p></div><div class="realm"><h3>Spring</h3><p>A realm still waiting to reveal its secrets.</p></div><div class="realm"><h3>Summer</h3><p>A realm of royalty, warmth and the prince at the heart of the story.</p></div></div></section>
+
 
 <section id="faq" class="faq">
   <div class="kicker">A few answers</div>
@@ -230,7 +244,6 @@ footer{text-align:center;padding:35px 7%;background:var(--navy);color:#e9dfcb;fo
     <details><summary>What is <em>Where Whispers Gather</em> about?</summary><p>It is an adult M/M fantasy romance about Zethan, a palace servant, and Valerious, a prince. Their love crosses a divide of status and power, while deadly trials, forbidden magic and political secrets threaten their world.</p></details>
     <details><summary>When will the book be released?</summary><p><strong>February 2027</strong> is the planned release date. I’ll share updates with newsletter subscribers as the publication plans progress.</p></details>
     <details><summary>When will beta readers receive the manuscript?</summary><p>The manuscript is planned to go to beta readers in <strong>November 2026</strong>, before the next stage of editing.</p></details>
-    <details><summary>How can I vote on the potential book covers?</summary><p>Sign up to the newsletter using the form on this page. Subscribers will be invited to vote on the potential covers for <em>Where Whispers Gather</em>.</p><a class="button" href="#newsletter">Sign up to vote</a></details>
     <details><summary>What is The Whispered Realms?</summary><p><em>Where Whispers Gather</em> is Book One of <strong>The Whispered Realms</strong>, a fantasy series set across four magical realms.</p></details>
     <details><summary>Is the story about coming out or homophobia?</summary><p>No. The story takes place in a queer-normalised world. The central barrier to the couple’s relationship is their social position: one is a servant and the other is a prince.</p></details>
   </div>
